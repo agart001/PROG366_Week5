@@ -1,10 +1,25 @@
-﻿namespace VS22_ConsoleApp
+﻿using static VS22_ConsoleApp.Utility.U_Console;
+using static VS22_ConsoleApp.Utility.U_IO;
+using static VS22_ConsoleApp.Utility.U_Shuffle;
+
+namespace VS22_ConsoleApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Print("Start program!");
+
+            Print("Read unshuffled file");
+            ICollection<string> unshuffled = ReadFile("unshuffled.txt");
+
+            Print("Shuffled contents");
+            ICollection<string> shuffled = FYShuffle<string>(unshuffled);
+
+            Print("Write shuffled contents to file");
+
+            WriteFile(shuffled, "shuffled.txt");
         }
+
     }
 }
