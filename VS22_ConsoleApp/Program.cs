@@ -14,7 +14,7 @@ namespace VS22_ConsoleApp
             ICollection<string> unshuffled = ReadFile("unshuffled.txt");
 
             Print("Shuffled contents");
-            ICollection<string> shuffled = FYShuffle<string>(unshuffled);
+            ICollection<string> shuffled = FYShuffle(unshuffled);
 
             Print("Write shuffled contents to file");
 
